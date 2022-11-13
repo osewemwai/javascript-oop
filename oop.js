@@ -15,7 +15,8 @@ class Person {
     }
 }
 let person1 = new Person("John", 30);
-
+console.log(person1);
+console.log(person1.introduction());
 
 /* 
 class Proffesor
@@ -25,7 +26,10 @@ class Proffesor
 */
 
 class Professor extends Person {
- 
+    
+    introduction() {
+        console.log(`My name is ${this.name} and I am ${this.age} and I teach ${this.subject}`);
+    }
     teach() {
         console.log(`Today we are learning about ${this.subject}`);
     }
@@ -44,21 +48,15 @@ class Student extends Person {
         this.subject = subject;
 
     }
-
     
     study(){
         console.log(`Today we are studying about ${this.subject}`);
-
     }
 }
-let student1 = new Student("John", 30, "Math");
-let value = 'The output';
-console.log(`${value} ${student1.introduction()} `);
-console.log(student1.study());
 
-console.log(new Student("Makululu", 48, "Math").introduction());
+console.log(new Student("Makululu", 48, "Math"));
 
-// public private protected Class 1 (date){}
+
 // Encaapsulation
 
 /* 
